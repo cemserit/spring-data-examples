@@ -7,6 +7,7 @@ Cassandra 2.x (recommended v3.x)
 ```
 ## Install (for ubuntu (16.04))
 ### Install Cassandra
+*Local OR Docker install (select only one)
 #### Local
 ```
 echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
