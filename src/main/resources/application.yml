@@ -1,0 +1,7 @@
+cassandra:
+  keyspace:
+    name: demo_keyspace
+  durableWrites: true
+  replication:
+    replicationFactor: 1
+    class: SimpleStrategy
