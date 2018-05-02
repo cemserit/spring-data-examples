@@ -1,7 +1,7 @@
 # spring-data-example
-## Documentation
-[Cassandra README](spring-data-cassandra/README.md)
-##How to run
+## Documentation (README)
+[Spring Data for Apache Cassandra](spring-data-cassandra/README.md)
+## How to run
 ### Download
 ```
 git clone https://github.com/cemserit/spring-data-examples.git
