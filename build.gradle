@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.0.1.RELEASE'
+        swaggerVersion = '2.9.2'
     }
     repositories {
         mavenCentral()
@@ -27,4 +28,9 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
 
     sourceCompatibility = 1.8
+
+    dependencies {
+        compile "io.springfox:springfox-swagger2:${swaggerVersion}"
+        compile "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+    }
 }

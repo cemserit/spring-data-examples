@@ -1,20 +1,13 @@
 # spring-cassandra-example
-Spring Data for Apache Cassandra example
+Spring Data for Redis example
 ## Install
 ### Install Cassandra
-*Local OR Docker install (select only one)
+* Local OR Docker install (select only one)
 #### Local
+[https://redis.io/download](https://redis.io/download) <br>
+#### Redis for docker
 ```
-echo "deb http://www.apache.org/dist/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
-curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install cassandra
-```
-for more details [cassandra.apache.org](http://cassandra.apache.org) <br>
-#### Docker (recommended)
-#### Cassandra for docker
-```
-sudo docker run --name dev-cassandra -p 7000:7000 -p 7001:7001 -p 9160:9160 -p 9042:9042 -d cassandra:3.11.2
+docker run -d --name redis -p 6379:6379 redis:4.0.1
 ```
 ## Examples
 ### Save person

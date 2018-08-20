@@ -1,12 +1,12 @@
-package com.cemserit.cassandra;
+package com.cemserit.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CassandraApplication {
-
+public class CoreLibraryApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CassandraApplication.class, args);
+        SpringApplication.run(CoreLibraryApplication.class, args);
     }
+
 }

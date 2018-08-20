@@ -1,7 +1,12 @@
 package com.cemserit.redis.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.redis.core.RedisHash;
+
+@RedisHash("Person")
 public class Person {
 
+    @Id
     private String email;
     private String name;
     private int age;

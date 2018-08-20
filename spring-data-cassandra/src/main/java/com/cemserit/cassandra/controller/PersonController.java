@@ -2,8 +2,10 @@ package com.cemserit.cassandra.controller;
 
 import com.cemserit.cassandra.model.Person;
 import com.cemserit.cassandra.service.PersonService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +13,9 @@ import java.util.Collections;
 import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "/persons", produces = "application/json;charset=UTF-8")
+@RequestMapping(value = "/persons", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@Api(value = "Person Controller Api", tags = {"person Controller"})
 public class PersonController {
-
 
     @Autowired
     private PersonService personService;

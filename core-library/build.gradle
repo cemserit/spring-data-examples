@@ -1,14 +1,11 @@
 dependencies {
-    compile project(':core-library')
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-data-cassandra')
-
+    compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 ext {
-    baseName = 'spring-data-cassandra'
-    mainClassName = 'com.cemserit.cassandra.CassandraApplication'
+    baseName = 'core-library'
+    mainClassName = 'com.cemserit.core.CoreLibraryApplication'
 }
 
 jar {
