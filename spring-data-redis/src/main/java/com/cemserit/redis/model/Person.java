@@ -2,13 +2,17 @@ package com.cemserit.redis.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
+
+import java.io.Serializable;
 
 @RedisHash("Person")
-public class Person {
+public class Person implements Serializable {
 
     @Id
     private String email;
     private String name;
+    @Indexed
     private int age;
 
     public Person() {
