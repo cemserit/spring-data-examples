@@ -46,7 +46,7 @@ public class PersonController extends AbstractController {
         return createResponse(personService.getPersonEmailList(), HttpStatus.OK);
     }
 
-    @GetMapping("/emails/{age}")
+    @GetMapping("/age/{age}")
     public ResponseEntity<Object> getPersonsEmailList(@PathVariable String age) {
         return createResponse(personService.getPersonAgeEmailList(age), HttpStatus.OK);
     }
@@ -89,7 +89,7 @@ public class PersonController extends AbstractController {
         Optional<Person> storedPersonOptional = personService.getPerson(email);
 
         // if the person is not registered, the return error
-        if (storedPersonOptional.isPresent())
+        if (!storedPersonOptional.isPresent())
             return createErrorResponse(PERSON_NOT_FOUND_ERROR,
                     PERSON_NOT_FOUND_ERROR_DESCRIPTION,
                     HttpStatus.BAD_REQUEST);
@@ -110,7 +110,7 @@ public class PersonController extends AbstractController {
         Optional<Person> storedPersonOptional = personService.getPerson(email);
 
         // if the person is not registered, the return error
-        if (storedPersonOptional.isPresent())
+        if (!storedPersonOptional.isPresent())
             return createErrorResponse(PERSON_NOT_FOUND_ERROR,
                     PERSON_NOT_FOUND_ERROR_DESCRIPTION,
                     HttpStatus.BAD_REQUEST);

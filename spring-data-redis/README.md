@@ -16,7 +16,6 @@ curl -X POST \
   http://localhost:8080/persons \
   -H 'Content-Type: application/json' \
   -d '{
-	"uuid": "8781d82d-08bc-4148-b00f-4ad7750b4934",
 	"email": "cemserit@gmail.com",
 	"name": "Cem Serit",
 	"age": 27
@@ -25,13 +24,12 @@ curl -X POST \
 ### Update person
 ```
 curl -X PUT \
-  http://localhost:8080/persons/8781d82d-08bc-4148-b00f-4ad7750b4934 \
+  http://localhost:8080/persons/cemserit@gmail.com \
   -H 'Content-Type: application/json' \
   -d '{
-	"uuid": "8781d82d-08bc-4148-b00f-4ad7750b4934",
 	"email": "cemserit@gmail.com",
-	"name": "Cem",
-	"age": 27
+	"name": "Cem Serit",
+	"age": 28
 }'
 ```
 ### Get all persons
@@ -39,28 +37,18 @@ curl -X PUT \
 curl -X GET \
   http://localhost:8080/persons 
 ```
-### Get person (find by uuid)
+### Get all person email list
 ```
 curl -X GET \
-  http://localhost:8080/persons/8781d82d-08bc-4148-b00f-4ad7750b4934 
+  http://localhost:8080/persons/emails
 ```
-### Get person (find by age)
-```
-curl -X GET \
-  http://localhost:8080/persons/custom_param?age=27
-```
-### Get person (find by email and age)
+### Get person email list by age (find by age)
 ```
 curl -X GET \
-  http://localhost:8080/persons/custom_params?email=cemserit@gmail.com&age=27
+  http://localhost:8080/persons/age/28
 ```
 ### Delete person
 ```
 curl -X DELETE \
-  http://localhost:8080/persons/8781d82d-08bc-4148-b00f-4ad7750b4934
-```
-### Delete all person
-```
-curl -X DELETE \
-  http://localhost:8080/persons
+  http://localhost:8080/persons/cemserit@gmail.com
 ```
