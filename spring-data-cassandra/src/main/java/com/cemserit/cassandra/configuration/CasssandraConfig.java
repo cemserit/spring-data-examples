@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
 import org.springframework.data.cassandra.config.SchemaAction;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Configuration
@@ -28,7 +28,7 @@ public class CasssandraConfig extends AbstractCassandraConfiguration {
                         + "AND replication = { 'replication_factor' : %s, 'class' : '%s' };",
                 keyspaceName, durableWrites, replicationFactor, replicationClass);
 
-        return Arrays.asList(script);
+        return Collections.singletonList(script);
     }
 
     @Override

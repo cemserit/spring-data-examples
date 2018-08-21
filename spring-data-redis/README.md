@@ -45,7 +45,7 @@ curl -X GET \
 ### Get person email list by age (find by age)
 ```
 curl -X GET \
-  http://localhost:8080/persons/age/28
+  http://localhost:8080/persons/emails?age=28
 ```
 ### Delete person
 ```

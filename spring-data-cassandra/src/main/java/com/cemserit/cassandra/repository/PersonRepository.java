@@ -5,9 +5,9 @@ import org.springframework.data.cassandra.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Stream;
 
 public interface PersonRepository extends CrudRepository<Person, UUID> {
 
@@ -18,9 +18,9 @@ public interface PersonRepository extends CrudRepository<Person, UUID> {
     Optional<Person> findByUuid(UUID uuid);
 
     @Query(allowFiltering = true)
-    Optional<Person> findByEmailAndAge(String email, int age);
+    List<Person> findByEmailAndAge(String email, int age);
 
     // Custom query
     @Query("SELECT * FROM PERSON WHERE age=:age ALLOW FILTERING")
-    Stream<Person> findByAgeStream(@Param("age") int age);
+    List<Person> findByAge(@Param("age") int age);
 }

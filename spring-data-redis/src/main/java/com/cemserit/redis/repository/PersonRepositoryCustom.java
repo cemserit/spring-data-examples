@@ -8,5 +8,5 @@ import java.util.Set;
 public interface PersonRepositoryCustom {
     Set<Person> filterByEmailList();
 
-    Set<Person> filterByAgeEmailList(String age);
+    Set<Person> filterByAgeEmailList(int age);
 }

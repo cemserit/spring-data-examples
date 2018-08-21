@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5level] %d{HH:mm:ss.SSS} [%t] [%M] %clr{%-20.70c} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.springframework" level="WARN"/>
+        <Logger name="org.springframework.web" level="DEBUG"/>
+        <Logger name="org.springframework.web.servlet" level="WARN"/>
+        <Logger name="org.apache" level="WARN"/>
+        <Logger name="springfox" level="WARN"/>
+        <Logger name="org.hibernate" level="WARN"/>
+        <Logger name="io.netty" level="WARN"/>
+        <Logger name="io.lettuce" level="WARN"/>
+        <Logger name="reactor" level="WARN"/>
+        <Root level="debug">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -5,3 +5,6 @@ cassandra:
   replication:
     replicationFactor: 1
     class: SimpleStrategy
+
+logging:
+  config: classpath:log4j2.xml

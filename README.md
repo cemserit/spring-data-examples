@@ -15,3 +15,7 @@ git clone https://github.com/cemserit/spring-data-examples.git
 ```
 ./gradlew :spring-data-redis:bootRun
 ```
+### Swagger UI
+```
+http://localhost:8080/swagger-ui.html
+```

@@ -9,6 +9,7 @@ import java.util.Map;
 
 import static com.cemserit.core.constant.ControllerConstant.*;
 
+@SuppressWarnings("unchecked")
 public abstract class AbstractController {
 
     protected ResponseEntity<Object> createResponse(final String message, final HttpStatus httpStatus) {

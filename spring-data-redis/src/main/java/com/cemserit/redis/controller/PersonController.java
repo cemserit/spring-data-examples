@@ -46,8 +46,8 @@ public class PersonController extends AbstractController {
         return createResponse(personService.getPersonEmailList(), HttpStatus.OK);
     }
 
-    @GetMapping("/age/{age}")
-    public ResponseEntity<Object> getPersonsEmailList(@PathVariable String age) {
+    @GetMapping(value = "/emails", params = "age")
+    public ResponseEntity<Object> getPersonsEmailList(@RequestParam("age") int age) {
         return createResponse(personService.getPersonAgeEmailList(age), HttpStatus.OK);
     }
 

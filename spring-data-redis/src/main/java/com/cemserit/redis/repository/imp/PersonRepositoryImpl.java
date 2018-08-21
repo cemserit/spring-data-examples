@@ -23,7 +23,7 @@ public class PersonRepositoryImpl implements PersonRepositoryCustom {
     }
 
     @Override
-    public Set<Person> filterByAgeEmailList(String age) {
+    public Set<Person> filterByAgeEmailList(int age) {
         return redisTemplate.opsForSet().members(AGE_KEY_PREFIX + age);
     }
 }

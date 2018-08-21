@@ -16,6 +16,10 @@ for more details [cassandra.apache.org](http://cassandra.apache.org) <br>
 ```
 sudo docker run --name dev-cassandra -p 7000:7000 -p 7001:7001 -p 9160:9160 -p 9042:9042 -d cassandra:3.11.2
 ```
+##### Cassandra cqlsh
+```
+docker exec -it __CONTAINER_ID__ cqlsh
+```
 ## Examples
 ### Save person
 ```
@@ -54,20 +58,15 @@ curl -X GET \
 ### Get person (find by age)
 ```
 curl -X GET \
-  http://localhost:8080/persons/custom_param?age=27
+  http://localhost:8080/persons?age=27
 ```
 ### Get person (find by email and age)
 ```
 curl -X GET \
-  http://localhost:8080/persons/custom_params?email=cemserit@gmail.com&age=27
+  http://localhost:8080/persons?email=cemserit@gmail.com&age=27
 ```
 ### Delete person
 ```
 curl -X DELETE \
   http://localhost:8080/persons/8781d82d-08bc-4148-b00f-4ad7750b4934
-```
-### Delete all person
-```
-curl -X DELETE \
-  http://localhost:8080/persons
 ```

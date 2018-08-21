@@ -4,3 +4,6 @@ spring:
     password:
     port: 6379
     ssl: false
+
+logging:
+  config: classpath:log4j2.xml

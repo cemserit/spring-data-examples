@@ -1,8 +1,5 @@
 package com.cemserit.core.constant;
 
-/**
- * Created by cemserit on 21.08.2018.
- */
 public final class ControllerConstant {
     public static final String MESSAGE_KEY = "message";
     public static final String ERROR_KEY = "error";
@@ -21,5 +18,8 @@ public final class ControllerConstant {
 
     public static final String PERSON_EMAIL_CANNOT_NULL_EMPTY_ERROR = "person_email_cannot_null_empty";
     public static final String PERSON_EMAIL_CANNOT_NULL_EMPTY_ERROR_DESCRIPTION = "Person email cannot be null or empty!";
+
+    public static final String PERSON_UUID_CANNOT_NULL_ERROR = "person_uuid_cannot_null";
+    public static final String PERSON_UUID_CANNOT_NULL_ERROR_DESCRIPTION = "Person uuid cannot be null!";
 
 }
