@@ -1,0 +1,33 @@
+dependencies {
+	compile project(':core-library')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+
+	runtime('com.h2database:h2')
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+ext {
+	baseName = 'spring-data-h2'
+	mainClassName = 'com.cemserit.h2.H2Application'
+}
+
+jar {
+	baseName = "${baseName}"
+	group = project.group
+	version = project.version
+	enabled = true
+	manifest {
+		attributes 'Main-Class': "${mainClassName}"
+		attributes "Class-Path": (configurations.runtime.files + jar.outputs.files)*.name.join(" ")
+	}
+}
+
+bootJar {
+	classifier = 'boot'
+	mainClassName = "${mainClassName}"
+	manifest {
+		attributes 'Start-Class': "${mainClassName}"
+	}
+}

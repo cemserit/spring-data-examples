@@ -12,10 +12,11 @@
         <Logger name="org.springframework.web.cors" level="WARN"/>
         <Logger name="org.apache" level="WARN"/>
         <Logger name="springfox" level="WARN"/>
-        <Logger name="org.hibernate" level="WARN"/>
+        <Logger name="com.zaxxer" level="WARN"/>
         <Logger name="io.netty" level="WARN"/>
-        <Logger name="io.lettuce" level="WARN"/>
-        <Logger name="reactor" level="WARN"/>
+        <Logger name="org.hibernate" level="WARN"/>
+
+
         <Root level="debug">
             <AppenderRef ref="STDOUT"/>
         </Root>

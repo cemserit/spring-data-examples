@@ -1,2 +1,2 @@
 rootProject.name = 'spring-data-examples'
-include 'spring-data-cassandra', 'spring-data-redis', 'core-library'
+include 'spring-data-cassandra', 'spring-data-redis', 'core-library', 'spring-data-h2'

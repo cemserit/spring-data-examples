@@ -9,6 +9,7 @@
         <Logger name="org.springframework" level="WARN"/>
         <Logger name="org.springframework.web" level="DEBUG"/>
         <Logger name="org.springframework.web.servlet" level="WARN"/>
+        <Logger name="org.springframework.web.cors" level="WARN"/>
         <Logger name="org.apache" level="WARN"/>
         <Logger name="springfox" level="WARN"/>
         <Logger name="com.datastax" level="WARN"/>
