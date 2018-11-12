@@ -1,7 +1,7 @@
 # spring-data-redis
 Spring Data for Redis example
 ## Install
-### Install Cassandra
+### Install Redis
 * Local OR Docker install (select only one)
 #### Local
 [https://redis.io/download](https://redis.io/download) <br>
