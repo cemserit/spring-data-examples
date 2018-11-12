@@ -1,4 +1,4 @@
-# spring-cassandra-example
+# spring-data-redis
 Spring Data for Redis example
 ## Install
 ### Install Cassandra
